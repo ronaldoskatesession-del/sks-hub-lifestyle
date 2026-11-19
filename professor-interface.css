@@ -1,0 +1,77 @@
+/* Presentation scoped to the professor page. */
+body.professor-interface{--pi-line:#424750;--pi-panel:#101318;--pi-orange:#ffb000;--pi-muted:#b2b8c4;background:#08090b}
+html[data-theme="light"] body.professor-interface{--pi-line:#cbd2dc;--pi-panel:#fff;--pi-orange:#a65b00;--pi-muted:#4e5c6d;background:#f4f6f8}
+body.professor-interface .teacher-shell{max-width:none;padding:0 28px 28px}
+body.professor-interface .teacher-top{min-height:72px;margin:0 -28px 17px;padding:13px 28px;border-bottom:1px solid var(--pi-line);gap:16px}
+body.professor-interface .teacher-brand{font-size:29px;white-space:nowrap}
+body.professor-interface .teacher-actions{gap:12px;align-items:center}
+body.professor-interface :is(.outline,.button,.theme-toggle){padding:8px 13px;font-size:12px;min-height:34px;line-height:1.3;border-radius:7px}
+body.professor-interface .pi-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin:0 0 13px}
+body.professor-interface .pi-heading h1{font-size:30px;line-height:1.2;letter-spacing:-.6px;margin:0 0 5px}
+body.professor-interface .pi-heading p{font-size:14px;line-height:1.5;margin:0;color:var(--ink)}
+body.professor-interface .pi-local{color:var(--pi-muted);border:1px solid var(--pi-line);padding:6px 10px;font-size:10px;border-radius:6px;white-space:nowrap;margin-top:5px}
+body.professor-interface .teacher-operation-status:empty{display:none}
+body.professor-interface .teacher-operation-status:not(:empty){font-size:11px;margin:4px 0;color:var(--pi-muted);padding:0}
+body.professor-interface .pi-tabs{display:flex;gap:5px;justify-content:space-between;border-bottom:1px solid var(--pi-line);margin:0 0 19px;overflow-x:auto;scrollbar-width:thin}
+body.professor-interface .pi-tabs button{display:flex;align-items:center;justify-content:center;gap:13px;background:transparent;border:0;border-bottom:3px solid transparent;color:var(--ink);font:inherit;font-size:14px;white-space:nowrap;padding:14px 12px;cursor:pointer;flex:1}
+body.professor-interface .pi-tabs button.active{color:var(--pi-orange);border-bottom-color:var(--pi-orange);font-weight:700}
+body.professor-interface .pi-tabs button:first-child svg{display:none}
+body.professor-interface .pi-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:18px}
+body.professor-interface .panel{background:var(--pi-panel);border-color:var(--pi-line);border-radius:10px;box-shadow:none}
+body.professor-interface .pi-kpi{display:flex;align-items:center;gap:16px;padding:13px 16px;min-width:0}
+body.professor-interface .pi-kpi-icon{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;background:#00cfe908;border-radius:50%;color:#00cbe4}
+body.professor-interface .pi-kpi-icon svg{width:34px;height:34px}
+body.professor-interface .pi-kpi:nth-child(2) .pi-kpi-icon{color:var(--pi-orange)}
+body.professor-interface .pi-kpi:nth-child(3) .pi-kpi-icon{color:#bd6df0}
+body.professor-interface .pi-kpi>div{min-width:0}
+body.professor-interface .pi-kpi>div>span{font-size:12px;line-height:1.35;display:block}
+body.professor-interface .pi-kpi strong{display:block;font-size:27px;line-height:1.15;margin-top:2px}
+body.professor-interface .pi-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:18px;align-items:start}
+body.professor-interface .pi-layout>*{min-width:0}
+body.professor-interface .pi-panel{padding:14px 19px;margin-bottom:15px}
+body.professor-interface .pi-panel h2{font-size:20px;line-height:1.25;letter-spacing:-.3px;margin:0 0 12px}
+body.professor-interface .pi-section-title{display:flex;justify-content:space-between;align-items:center;gap:12px}
+body.professor-interface .pi-section-title h2{margin-bottom:5px}
+body.professor-interface .pi-subtitle{font-size:12px;line-height:1.5;color:var(--pi-muted);margin:3px 0 12px}
+body.professor-interface .pi-empty{font-size:13px;line-height:1.65;color:var(--pi-muted);margin:15px 0 19px}
+body.professor-interface .pi-action{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:27px;font:inherit;font-size:12px;line-height:1.2;padding:4px 13px;background:transparent;color:var(--pi-orange);border:1px solid var(--pi-orange);border-radius:6px;cursor:pointer;text-decoration:none}
+body.professor-interface .pi-action:hover{background:#ffa50012}
+body.professor-interface .pi-text{border:0;background:none;color:var(--pi-orange);font:inherit;font-size:12px;cursor:pointer;padding:5px 0;text-align:left}
+body.professor-interface .pi-person{display:flex;gap:12px;align-items:center;font-size:12px}
+body.professor-interface .pi-avatar{width:33px;height:33px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:#ff9f16;color:#151515;font-weight:700;font-size:12px}
+body.professor-interface .tone-1{background:#03cadd;color:#072a31}
+body.professor-interface .tone-2{background:#bd6df0;color:#1f0b31}
+body.professor-interface .pi-delivery-table td,body.professor-interface .pi-delivery-table th{padding:9px 6px;font-size:12px;border-color:var(--pi-line)}
+body.professor-interface .pi-delivery-table th{font-weight:600;color:var(--pi-muted)}
+body.professor-interface .pi-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+body.professor-interface .pi-shortcuts a{display:flex;align-items:center;gap:14px;border:1px solid var(--pi-line);border-radius:8px;padding:12px;color:var(--ink);text-decoration:none;min-width:0}
+body.professor-interface .pi-shortcuts a:hover{border-color:var(--pi-orange)}
+body.professor-interface .pi-shortcuts svg{color:#00bed8;flex-shrink:0}
+body.professor-interface .pi-shortcuts a:nth-child(2) svg{color:#bd6df0}
+body.professor-interface .pi-shortcuts b{font-size:12px;display:block;line-height:1.5}
+body.professor-interface .pi-shortcuts small{font-size:11px;line-height:1.4;color:var(--pi-muted);display:block;margin-top:3px}
+body.professor-interface .pi-meeting{display:flex;gap:16px;align-items:center;padding:10px 0}
+body.professor-interface .pi-meeting>svg{width:48px;height:48px;padding:9px;color:var(--pi-orange);border:1px solid var(--pi-orange);border-radius:8px;flex-shrink:0}
+body.professor-interface .pi-meeting b{font-size:14px}
+body.professor-interface .pi-follow{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--pi-line);padding:10px 0}
+body.professor-interface .pi-follow>div{flex:1;min-width:0}
+body.professor-interface .pi-follow b{font-size:13px}
+body.professor-interface .pi-follow small{display:block;font-size:12px;line-height:1.5;color:var(--pi-muted)}
+body.professor-interface .pi-administration{display:flex;gap:14px;align-items:center;padding:15px}
+body.professor-interface .pi-administration>svg{color:var(--pi-orange);width:32px;height:32px;flex-shrink:0}
+body.professor-interface .pi-administration>div{flex:1;min-width:0}
+body.professor-interface .pi-administration h2{font-size:18px;margin:0 0 3px}
+body.professor-interface .pi-administration .pi-subtitle{margin:0;font-size:11px}
+body.professor-interface .pi-instructions{font-size:12px;color:var(--pi-muted);margin:20px 0}
+body.professor-interface .pi-instructions summary{cursor:pointer}
+body.professor-interface .pi-instructions .page-heading{display:none}
+body.professor-interface .pi-roster>.teacher-stats{display:none}
+body.professor-interface [hidden]{display:none!important}
+body.professor-interface .teacher-test-tools{margin-top:18px}
+body.professor-interface :is(.pi-tabs button,.pi-action,.pi-text,.pi-shortcuts a):focus-visible{outline:2px solid var(--pi-orange);outline-offset:3px}
+html[data-theme="light"] body.professor-interface .pi-kpi-icon{color:#00748b;background:#e8f6f9}
+html[data-theme="light"] body.professor-interface .pi-kpi:nth-child(3) .pi-kpi-icon{color:#8e3ebb}
+@media(max-width:1250px){body.professor-interface .pi-kpis{gap:10px}body.professor-interface .pi-kpi{padding:12px;gap:9px}body.professor-interface .pi-kpi-icon{width:35px;height:35px}body.professor-interface .pi-kpi-icon svg{width:27px;height:27px}body.professor-interface .pi-layout{grid-template-columns:minmax(0,1fr) minmax(270px,.8fr)}body.professor-interface .pi-shortcuts{grid-template-columns:minmax(0,1fr)}body.professor-interface .pi-tabs button{gap:7px;padding:12px 8px;font-size:12px}body.professor-interface .teacher-actions{gap:7px}body.professor-interface .pi-administration{flex-wrap:wrap}}
+@media(max-width:1050px){body.professor-interface .pi-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}body.professor-interface .pi-layout{grid-template-columns:minmax(0,1fr)}body.professor-interface .pi-shortcuts{grid-template-columns:repeat(3,minmax(0,1fr))}body.professor-interface .pi-local{display:none}body.professor-interface .teacher-top{flex-wrap:wrap}}
+@media(max-width:800px){body.professor-interface .teacher-shell{padding:0 18px 25px}body.professor-interface .teacher-top{margin:0 -18px 17px;padding:12px 18px;flex-direction:row;align-items:center}body.professor-interface .teacher-actions{flex-wrap:wrap}body.professor-interface .pi-heading h1{font-size:26px}body.professor-interface .pi-heading p{font-size:13px}body.professor-interface .pi-tabs button{flex:none}body.professor-interface .pi-shortcuts{grid-template-columns:minmax(0,1fr)}body.professor-interface .pi-panel{padding:15px}body.professor-interface .pi-panel h2{font-size:18px}}
+@media(max-width:460px){body.professor-interface .teacher-brand{font-size:25px}body.professor-interface .teacher-brand small{font-size:10px!important}body.professor-interface .pi-kpi{gap:8px;padding:11px 9px}body.professor-interface .pi-kpi>div>span{font-size:11px}body.professor-interface .pi-kpi strong{font-size:24px}body.professor-interface .pi-kpi-icon{width:28px;height:28px}body.professor-interface .pi-kpi-icon svg{width:24px;height:24px}body.professor-interface .pi-section-title{align-items:flex-start}body.professor-interface .pi-administration{gap:10px}body.professor-interface .pi-action{padding:5px 8px;font-size:11px}}

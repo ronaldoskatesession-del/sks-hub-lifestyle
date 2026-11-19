@@ -1,0 +1,75 @@
+/* Teacher/admin presentation only; learning routes retain their own styles. */
+body.teacher-admin{--admin-line:#343943;--admin-panel:#101318;--admin-muted:#a8b1c0;--admin-ink:#f4f5f7;--admin-orange:#ffae00;background:#080a0d;color:var(--admin-ink)}
+html[data-theme="light"] body.teacher-admin{--admin-line:#d3d9e3;--admin-panel:#fff;--admin-muted:#536175;--admin-ink:#172334;--admin-orange:#b76b00;background:#f5f6f8;color:var(--admin-ink)}
+body.teacher-admin .sidebar{overflow-y:auto;scrollbar-width:thin}
+body.teacher-admin .sidebar>*{flex-shrink:0}
+body.teacher-admin .sidebar-path{margin-top:24px}
+body.teacher-admin .admin-nav-group{border:0;margin:5px 0;padding:0}
+body.teacher-admin .admin-nav-group summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;padding:10px 8px;color:var(--admin-muted);font-size:10px;letter-spacing:.04em;font-weight:700;text-transform:uppercase}
+body.teacher-admin .admin-nav-group summary::-webkit-details-marker{display:none}
+body.teacher-admin .admin-nav-group summary:after{content:'+';font-size:14px}
+body.teacher-admin .admin-nav-group[open] summary:after{content:'−'}
+body.teacher-admin .admin-nav-group .nav-item{padding:8px 11px;margin:2px 0 2px 6px;font-size:12px;line-height:1.4;white-space:normal}
+body.teacher-admin .admin-collapse{background:transparent;border:1px solid var(--admin-line);border-radius:6px;color:var(--admin-muted);font:inherit;font-size:11px;padding:6px;margin-bottom:16px;cursor:pointer}
+body.teacher-admin.admin-sidebar-collapsed .sidebar{width:70px;padding:16px 6px}
+body.teacher-admin.admin-sidebar-collapsed .sidebar>:not(.admin-collapse){display:none}
+body.teacher-admin.admin-sidebar-collapsed .admin-collapse{font-size:0}
+body.teacher-admin.admin-sidebar-collapsed .admin-collapse:after{content:'☰';font-size:18px}
+body.teacher-admin.admin-sidebar-collapsed .workspace{margin-left:70px}
+body.teacher-admin .admin-page-heading{margin-bottom:18px}
+body.teacher-admin .admin-page-heading h1{font-size:30px;margin:0 0 7px}
+body.teacher-admin .admin-page-heading p{font-size:13px;margin:0 0 6px;color:var(--admin-muted)}
+body.teacher-admin .admin-page-heading .eyebrow{color:var(--admin-orange);font-size:10px}
+body.teacher-admin .admin-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+body.teacher-admin .admin-kpi{padding:16px;display:flex;flex-direction:column;gap:7px;min-width:0}
+body.teacher-admin .admin-kpi strong{font-size:29px;color:var(--admin-ink)}
+body.teacher-admin .admin-kpi small{color:var(--admin-muted);font-size:11px;line-height:1.5}
+body.teacher-admin .admin-kpi>span{font-size:12px}
+body.teacher-admin .admin-dashboard-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,1fr);gap:16px}
+body.teacher-admin .admin-dashboard-grid>*{min-width:0}
+body.teacher-admin .admin-panel{padding:18px;margin-bottom:14px}
+body.teacher-admin .panel{background:var(--admin-panel);border-color:var(--admin-line);color:var(--admin-ink)}
+body.teacher-admin .admin-panel h2{margin:0 0 14px;font-size:18px}
+body.teacher-admin .admin-note,body.teacher-admin .admin-empty{color:var(--admin-muted);line-height:1.65;font-size:12px}
+body.teacher-admin .admin-empty{margin:6px 0 12px}
+body.teacher-admin .admin-note{margin:8px 0}
+body.teacher-admin :is(.outline,.button,.quiet,.theme-toggle){font-size:12px;padding:7px 10px;min-height:30px;line-height:1.4}
+body.teacher-admin .admin-shortcuts{display:flex;flex-wrap:wrap;gap:8px}
+body.teacher-admin [hidden]{display:none!important}
+body.teacher-admin .teacher-shell{padding:24px;max-width:none}
+body.teacher-admin .teacher-top{margin-bottom:22px;padding-bottom:16px}
+body.teacher-admin .teacher-table td{overflow-wrap:anywhere}
+body.teacher-admin .editor-layout{grid-template-columns:minmax(0,1.7fr) minmax(240px,1fr)}
+body.teacher-admin .admin-editor-grid{display:grid;grid-template-columns:minmax(200px,.65fr) minmax(0,2fr);gap:16px;align-items:start}
+body.teacher-admin .admin-editor-outline{padding:16px;max-height:75vh;overflow:auto;position:sticky;top:16px}
+body.teacher-admin .admin-editor-outline h2{font-size:16px}
+body.teacher-admin .admin-editor-outline a{display:flex;gap:10px;padding:12px 8px;border:1px solid var(--admin-line);border-radius:7px;margin:8px 0;font-size:12px;line-height:1.4}
+body.teacher-admin .admin-editor-outline a[aria-current]{border-color:var(--admin-orange);color:var(--admin-orange)}
+body.teacher-admin .admin-editor-main{min-width:0}
+body.teacher-admin .admin-editor-main .editor-layout{display:block}
+body.teacher-admin .admin-editor-main .editor-layout>aside{margin-top:16px}
+body.teacher-admin .admin-editor-context{padding:16px;border:1px solid var(--admin-line);border-radius:8px;margin-bottom:12px}
+body.teacher-admin .admin-editor-context h2{font-size:18px;margin:0 0 8px}
+body.teacher-admin .admin-editor-context p{font-size:12px;color:var(--admin-muted)}
+body.teacher-admin .admin-review-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:16px;align-items:start}
+body.teacher-admin .admin-check{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:12px 0;border-top:1px solid var(--admin-line)}
+body.teacher-admin .admin-check label{font-size:13px;display:flex;gap:8px;align-items:center}
+body.teacher-admin .admin-check small{display:block;color:var(--admin-muted);font-size:11px;margin:6px 0}
+body.teacher-admin .admin-check textarea{grid-column:1/-1;width:100%;min-height:58px}
+body.teacher-admin :is(input,select,textarea){max-width:100%;color:var(--admin-ink);background:var(--admin-panel);border:1px solid var(--admin-line);border-radius:6px;padding:8px;font:inherit;font-size:13px}
+body.teacher-admin .admin-review-form textarea{width:100%;min-height:130px}
+body.teacher-admin .admin-review-tools{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:18px 0}
+body.teacher-admin .admin-review-tools label{display:grid;gap:6px;font-size:12px;max-width:100%}
+body.teacher-admin .admin-review-state{padding:12px 16px;border:1px solid var(--admin-orange);border-radius:8px;color:var(--admin-orange);margin:12px 0;font-size:13px}
+body.teacher-admin .admin-review-save{position:sticky;top:16px}
+body.teacher-admin .admin-revision-stats{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0}
+body.teacher-admin .admin-revision-stats b{font-size:22px}
+body.teacher-admin .admin-revision-stats>div{padding:12px;border:1px solid var(--admin-line);border-radius:7px;flex:1;min-width:120px}
+@media(max-width:1120px){body.teacher-admin .admin-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}body.teacher-admin .admin-dashboard-grid,body.teacher-admin .admin-review-grid{grid-template-columns:minmax(0,1fr)}body.teacher-admin .admin-review-save{position:static}}
+@media(max-width:800px){body.teacher-admin.admin-sidebar-collapsed .workspace{margin-left:0}body.teacher-admin .sidebar{width:245px}body.teacher-admin .admin-editor-grid{grid-template-columns:minmax(0,1fr)}body.teacher-admin .admin-editor-outline{max-height:230px;position:static}body.teacher-admin .teacher-shell{padding:18px}body.teacher-admin .admin-page-heading h1{font-size:26px}}
+@media(max-width:480px){body.teacher-admin .admin-kpis{grid-template-columns:minmax(0,1fr)}body.teacher-admin .admin-check{grid-template-columns:minmax(0,1fr)}body.teacher-admin .admin-review-grid{display:block}body.teacher-admin .admin-panel{padding:14px}body.teacher-admin .admin-review-tools select{width:100%}}
+body.teacher-admin .admin-modules-list .module-grid{grid-template-columns:minmax(0,1fr)}
+body.teacher-admin .admin-modules-list .module-tile{min-height:0}
+body.teacher-admin .admin-shortcuts button[aria-pressed="true"]{border-color:var(--admin-orange);color:var(--admin-orange)}
+
+body.teacher-admin .admin-check-target{grid-column:1/-1;display:grid;gap:6px;min-width:0}body.teacher-admin .admin-check-target select{width:100%;min-width:0}
