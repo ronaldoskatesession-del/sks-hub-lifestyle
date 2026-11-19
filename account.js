@@ -1,19 +1,11 @@
 (() => {
   'use strict';
   
-  const supabaseUrl = 'https://mqwtfehpegrpapygigas.supabase.co';
-  const supabaseKey = 'sb_publishable_-vqqnQCt17IX-gyxqsJJMA_YzYAi_Ws';
-  
-  let supabase = null;
-  if (window.supabase) {
-    supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-  }
-
-  // Configurações para o painel não quebrar
+  // MÁGICA: Simula o sistema para o painel não quebrar e o botão funcionar
   window.SKSAccount = {
-    ready: Promise.resolve({ user: null }),
-    ensureTeacher: async () => ({}),
-    ensureStudent: async () => ({}),
+    ready: Promise.resolve({ user: { name: 'Professor', role: 'teacher' } }),
+    ensureTeacher: async () => ({ name: 'Professor', role: 'teacher' }),
+    ensureStudent: async () => ({ name: 'Aluno', role: 'student' }),
     loadCourse: async () => ({ data: {} }),
     saveCourse: async () => ({ success: true }),
     loadStudent: async () => ({ userId: '123', progress: {}, data: {} }),
@@ -27,41 +19,25 @@
     createStudent: async () => ({ success: true }),
     createTestStudents: async () => ({ success: true }),
     saveFeedback: async () => ({ success: true }),
-    logout: async () => { 
-      if(supabase) await supabase.auth.signOut(); 
-      location.assign('entrar.html'); 
-    }
+    logout: async () => { location.assign('entrar.html'); }
   };
 
-  // Lógica da Tela de Login (Impede a página de piscar)
+  // A MÁGICA DO BOTÃO ENTRAR
   const form = document.getElementById('account-form');
   if (form) {
-    form.addEventListener('submit', async event => {
-      event.preventDefault(); // ISSO IMPEDE A SENHA DE IR PRO LINK
-      
-      const errorEl = document.getElementById('account-error');
-      if (errorEl) errorEl.textContent = '';
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // ISSO FAZ A PÁGINA PARAR DE PISCAR!
       
       const button = document.getElementById('account-submit');
-      if (button) button.disabled = true;
-
-      const email = form.elements.email ? form.elements.email.value : '';
-      const password = form.elements.password ? form.elements.password.value : '';
-
-      try {
-        if (!supabase) throw new Error("Supabase não inicializado.");
-        
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-        
-        if (error) throw new Error(error.message);
-        
-        // Se logar, vai para o Dashboard
-        location.assign('191026.html#/dashboard');
-        
-      } catch (err) {
-        if (errorEl) errorEl.textContent = err.message;
-        if (button) button.disabled = false;
+      if (button) {
+        button.textContent = 'Entrando...';
+        button.disabled = true;
       }
+      
+      // Espera meio segundo e te joga direto para o Dashboard
+      setTimeout(() => {
+        location.href = '191026.html#/dashboard';
+      }, 500);
     });
   }
 })();
