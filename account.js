@@ -75,10 +75,7 @@
       }
       
       // Se o título for "aluno", vai pra área do aluno. Senão, vai pro dashboard.
-      let destino = '191026.html#/dashboard';
-      if (titulo && titulo.textContent.includes('aluno')) {
-         destino = 'aluno.html'; 
-      }
+      let destino = 'aluno.html';
 
       setTimeout(() => {
         location.href = destino;
