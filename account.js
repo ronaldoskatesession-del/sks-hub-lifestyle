@@ -75,7 +75,7 @@
       }
       
       // Se o título for "aluno", vai pra área do aluno. Senão, vai pro dashboard.
-      let destino = 'aluno.html';
+            let destino = '191026.html#/dashboard';
 
       setTimeout(() => {
         location.href = destino;
