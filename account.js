@@ -2,7 +2,7 @@
   'use strict';
 
   // 1. Finge que somos um usuário logado em todas as páginas
-  const mockUser = { id: '1', name: 'Usuário Teste', role: 'teacher' };
+  const mockUser = { id: '1', name: 'Usuário Teste', role: 'student' };
 
   // 2. Engana o servidor para não dar erro de "servidor local"
   window.fetch = async (url, options) => {
